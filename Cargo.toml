@@ -17,9 +17,11 @@ getrandom = { version = "0.2", optional = true, features = ["js"] }
 getrandom = { version = "0.2", optional = true }
 
 [dependencies]
-siphasher = "1.0.1"
+libm = "0.2"
+siphasher = { version = "1.0.1", default-features = false }
 
 [features]
-default = ["random"]
+default = ["std", "random"]
+std = ["siphasher/std"]
 random = ["getrandom"]
 serde = ["siphasher/serde_std"]

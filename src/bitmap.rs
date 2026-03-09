@@ -1,5 +1,6 @@
-use std::convert::{TryFrom, TryInto};
-use std::fmt::Debug;
+use alloc::{vec, vec::Vec};
+use core::convert::{TryFrom, TryInto};
+use core::fmt::Debug;
 
 pub const VERSION: u8 = 1;
 pub const BITMAP_HEADER_SIZE: usize = 1 + 8 + 4 + 32;
